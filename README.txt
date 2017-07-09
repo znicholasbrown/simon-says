@@ -1,3 +1,1 @@
-A Pen created at CodePen.io. You can find this one at http://codepen.io/znicholasbrown/pen/YQzgbO.
-
- 
+A Javascript game of Simon Says, the classic hand-held game. 
