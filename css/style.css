@@ -1,0 +1,277 @@
+
+body {
+	background-color: white;
+}
+.game_container {
+	width: 100%;
+  margin: auto;
+  position: absolute;
+  top: 50%; left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
+          transform: translate(-50%,-50%);
+	text-align: center;
+}
+.button_container {
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px 0px 10px 0px;
+	width: 600px;
+	background-color: #111;
+	border-radius: 22.5% 10px 22.5% 10px;
+	text-align: center;
+	box-shadow: 5px 5px 10px black;
+}
+.rounder {
+  width: 250px;
+  height: 250px;
+  background-color: #111;
+	color: white;
+  position: absolute;
+  border-radius: 25%;
+	border-top: 8px solid #660000;
+	border-right: 8px solid #000044;
+	border-bottom: 8px solid #978900;
+	border-left: 8px solid #440044;
+  margin: auto;
+  top: 50%; left: 50%;
+  -webkit-transform: translate(-50%,-50%) rotate(-45deg);
+      -ms-transform: translate(-50%,-50%) rotate(-45deg);
+          transform: translate(-50%,-50%) rotate(-45deg);
+}
+.menu {
+	width: 175px;
+  height: 150px;
+  background-color: transparent;
+	color: white;
+  position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: -15px;
+	top: 50%; left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
+          transform: translate(-50%,-50%);
+}
+.buttons {
+	position: relative;
+	width: 250px;
+	height: 250px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-right: 20px;
+	margin-left: 20px;
+	border: 0px solid black;
+}
+.red {
+	background-color: #CC0000;
+	border-right: 3px solid #660000;
+	border-bottom: 3px solid #660000;
+	border-radius: 45% 10px 10px 10px;
+	box-shadow: -5px -5px 10px black;
+}
+.red:active {
+	box-shadow: 0px 0px 0px black;
+	transform: translateY(1px) translateX(1px);
+}
+.blue {
+	background-color: #0000BB;
+	border-left: 3px solid #000044;
+	border-bottom: 3px solid #000044;
+	border-radius: 10px 10px 10px 10px;
+	box-shadow: 5px -5px 10px black;
+}
+.blue:active {
+	box-shadow: 0px 0px 0px black;
+	transform: translateY(1px) translateX(-1px);
+}
+.purple {
+	background-color: #990099;
+	border-right: 3px solid #440044;
+	border-top: 3px solid #440044;
+	border-radius: 10px 10px 10px 10px;
+	box-shadow: -5px 5px 10px black;	
+}
+.purple:active {
+	box-shadow: 0px 0px 0px black;
+	transform: translateY(-1px) translateX(1px);
+}
+.yellow {
+	background-color: #E0CC00;
+	border-left: 3px solid #978900;
+	border-top: 3px solid #978900;
+	border-radius: 0% 10px 45% 10px;
+	box-shadow: 5px 5px 10px black;
+}
+.yellow:active {
+	box-shadow: 0px 0px 0px black;
+	transform: translateY(-1px) translateX(-1px);
+}
+.one {
+	background-color: #FF0000;
+	transform: translateY(1px) translateX(1px);
+}
+.two {
+	background-color: #0000FF;
+	transform: translateY(1px) translateX(-1px);
+}
+.three {
+	background-color: #AA00AA;
+	transform: translateY(-1px) translateX(1px);
+}
+.four {
+	background-color: #FFFF00;
+	transform: translateY(-1px) translateX(-1px);
+}
+
+button:focus {
+	outline: 0;
+}
+#start, #reset {
+	position: relative;
+	text-align: center;
+	width: 100px;
+	height: 25px;
+	margin-top: 50px;
+	background-color: #009706;
+	border-bottom: 3px solid #004009;
+	border-top: 0px;
+	border-left: 0px;
+	border-right: 0px;
+	font-family: 'Nova Mono', monospace;
+	color: white;
+	
+}
+#start:active, #reset:active {
+	border-bottom: 2px solid #004009;
+	transform: translateY(1px);
+}
+#reset {
+	display: none;
+}
+#score {
+	opacity: 0.25;
+}
+.score_box {
+	background-color: BLACK;
+	border-top: 5px solid #353535;
+  border-left: 5px solid #252525;
+  border-right: 5px solid #131313;
+  border-bottom: 5px solid #111111;
+  border-radius: 1.5%;
+	width: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 15px;
+	margin-bottom: 5px;
+	padding: 5px 5px 5px 5px;
+	font-family: 'Nova Mono', monospace;
+	font-size: 25px;
+	color: #009706;
+}
+.title {
+	margin-top: -15px;
+	width: 150px;
+	font-size: 36px;
+	margin-left: auto;
+	margin-right: auto;
+	font-family: 'Arvo', monospace;
+}
+#loss {
+	opacity: 0.25;
+	font-family: 'Nova Mono', monospace;
+	transition-timing-function: ease-in-out;
+}
+@keyframes loss_animation_forward {
+	  0% {clip-path: polygon(0 0, 0 0, 0 100%, 0 100%)}
+  100% {clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%)}
+}
+.lose_message1 {
+	animation-name: loss_animation_forward;
+	animation-duration: 1s;
+	-webkit-animation-duration: 1s;
+  -webkit-animation-name: loss_animation_forward;
+  animation-fill-mode: forwards;
+	transition-timing-function: ease-in-out;
+}
+@keyframes loss_animation_backward {
+	  0% {clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%)}
+  100% {clip-path: polygon(0 0, 0 0, 0 100%, 0 100%)}
+}
+.lose_message2 {
+	animation-name: loss_animation_backward;
+	animation-duration: 1s;
+	-webkit-animation-duration: 1s;
+  -webkit-animation-name: loss_animation_backward;
+  animation-fill-mode: forwards;
+	transition-timing-function: ease-in-out;
+}
+.lose_box {
+	background-color: BLACK;
+	border-top: 5px solid #353535;
+  border-left: 5px solid #252525;
+  border-right: 5px solid #131313;
+  border-bottom: 5px solid #111111;
+  border-radius: 1.5%;
+	width: 185px;
+	text-align: center;
+	height: 25px;
+	position: absolute;
+	font-family: 'Nova Mono', monospace;
+	color: red;
+	margin-top: 55px;
+	top: 50%; left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
+          transform: translate(-50%,-50%);
+}
+#onoff {
+	position: absolute;
+	margin-top: -70%;
+	margin-left: -5%;
+	width: 40px;
+	height: 15px;
+	font-family: 'Arvo', monospace;
+	background-color: black;
+	padding-left: 4px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	padding-right: 4px;
+	border: 2px inset gray;
+	line-height: 15px;
+	font-size: 8px;
+}
+#onoffbutton {
+	width: 50%;
+	margin-top: -5%;
+	height: 92%;
+	background-color: #EE4800;
+	box-shadow: 1px 1px 1px black;
+	position: absolute;
+	margin-left: 42%;
+	font-size: 16px;
+	color: #272727;
+}
+.strict {
+	font-family: 'Arvo', monospace;
+	font-size: 10px;
+	position: absolute;
+	margin-left: 140px;
+	margin-top: 25px;
+}
+#strict_button {
+	-webkit-appearance: none;
+	background-color: #AA0000;
+	width: 10px;
+	height: 10px;
+	border-radius: 45%;
+	border: 1px solid black;
+}
+#strict_button:focus {
+	text-decoration: none;
+	outline: none;
+}
+#onoffbutton:hover,#strict_button:hover,#start:hover {
+	cursor: pointer;
+}
